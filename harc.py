@@ -117,26 +117,25 @@ elif kérdés == 'nem':
 
 
 
-# Fájl beolvasása
-with open('index.json', 'r', encoding="utf-8") as f:
-    kartyak = json.load(f)
-e = 110
-# JSON adatok feldolgozása
-szoveg = kartyak["a"][e-1]["szoveg"]
+class Tolvaj:
+    def __init__(self, Thp, Tdmg):
+        self.Thp = Thp
+        self.Tdmg = Tdmg
+
+    def getEletero(self):
+      return self.eletero
+
+    def getHarciero(self):
+      return self.harciero
 
 
-    # Kártya adatainak felhasználása
-print('\n')
-print(f"Pálya: {szoveg}")
+
 
 class Tolvaj:
     def __init__ (self, Thp, Tdmg):
         self.Thp = Thp = 6
         self.Tdmg = Tdmg = 7
-        
-    def halál(self):
-        if sajathp <= 0:
-            print("A játéknak itt vége ")
+
 
 class harc:
     def sebzés(self):
