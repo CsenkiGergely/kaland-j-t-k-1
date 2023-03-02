@@ -113,4 +113,4 @@ if kérdés == 'igen':
     
 elif kérdés == 'nem':
     print('nem tetted próbára a szerencsédet')
-    print(f'a te szerencséd {sajatluckmax}')
+

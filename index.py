@@ -20,4 +20,4 @@ szoveg = kartyak["a"][e-1]
 
 
 print('\n')
-print(f"Pálya: {szoveg} \n")
+
