@@ -94,19 +94,6 @@ def Iszapsarkany2():
     Eidmg = 9
     return f'Első Iszapsárkány ellenfél; Életereje: {EIhp}, Ügyessége: {Eidmg}'
 
-class Tolvaj:
-    def __init__(self, Thp, Tdmg):
-        self.Thp = Thp
-        self.Tdmg = Tdmg
-
-    def getEletero(self):
-      return self.eletero
-
-    def getHarciero(self):
-      return self.harciero
-
-    
-
 print(*dobas)
 print(dobas2)
 print(dobas3)
@@ -128,10 +115,7 @@ elif kérdés == 'nem':
     print('nem tetted próbára a szerencsédet')
     print(f'a te szerencséd {sajatluckmax}')
 
-def Tolvaj(self, Thp, Tdmg):
-    self.Thp = Thp = 6
-    self.Thp = Tdmg = 7
-    return f'Tolvaj ellenfél; Életereje: {Thp}, Ügyessége {Tdmg}'
+
 
 # Fájl beolvasása
 with open('index.json', 'r', encoding="utf-8") as f:
@@ -144,3 +128,29 @@ szoveg = kartyak["a"][e-1]["szoveg"]
     # Kártya adatainak felhasználása
 print('\n')
 print(f"Pálya: {szoveg}")
+
+class Tolvaj:
+    def __init__ (self, Thp, Tdmg):
+        self.Thp = Thp = 6
+        self.Tdmg = Tdmg = 7
+        
+    def halál(self):
+        if sajathp <= 0:
+            print("A játéknak itt vége ")
+
+class harc:
+    def sebzés(self):
+        dobas5 = random.randint(1,6)
+        dobas6 = random.randint(1,6)
+        ertek1 = dobas5 =+ sajatdmg
+        ertek2 = dobas6 =+ self.Tdmg
+
+        if ertek2 > ertek1:
+            sajathp =- 2
+            print(f'Meg sebeztek. A te életerőd {sajathp}')
+        elif ertek2 < ertek1:
+            self.Thp -= 2
+            print(f'Megsebezted az ellenfelet. Az ellenfél életereje: {self.Thp}')
+        else:
+            print('Egyikőtök sem sebződött.')
+
