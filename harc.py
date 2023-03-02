@@ -115,10 +115,7 @@ elif kérdés == 'nem':
     print('nem tetted próbára a szerencsédet')
     print(f'a te szerencséd {sajatluckmax}')
 
-def Tolvaj(self, Thp, Tdmg):
-    self.Thp = Thp = 6
-    self.Thp = Tdmg = 7
-    return f'Tolvaj ellenfél; Életereje: {Thp}, Ügyessége {Tdmg}'
+
 
 # Fájl beolvasása
 with open('index.json', 'r', encoding="utf-8") as f:
@@ -131,3 +128,26 @@ szoveg = kartyak["a"][e-1]["szoveg"]
     # Kártya adatainak felhasználása
 print('\n')
 print(f"Pálya: {szoveg}")
+
+class Tolvaj:
+    def __init__ (self, Thp, Tdmg):
+        self.Thp = Thp = 6
+        self.Tdmg = Tdmg = 7
+        
+    def halál(self):
+        if sajathp <= 0:
+            print("A játéknak itt vége ")
+
+    def sebzés(self):
+        dobas5 = random.randint(1,6)
+        dobas6 = random.randint(1,6)
+        ertek1 = dobas5 =+ sajatdmg
+        ertek2 = dobas6 =+ self.Tdmg
+        if ertek2 >= ertek1:
+            sajathp =- 1
+            print(f'Meg sebeztek. A te hp-d {sajathp}')
+        else:
+            print('nem sebeztek meg')
+
+
+    
