@@ -144,13 +144,13 @@ class harc:
         dobas6 = random.randint(1,6)
         ertek1 = dobas5 =+ sajatdmg
         ertek2 = dobas6 =+ self.Tdmg
-        if ertek2 >= ertek1:
-            sajathp =- 1
-            print(f'Meg sebeztek. A te hp-d {sajathp}')
-        elif ertek1 >= ertek2:
-             self.Thp =- 1
-             print(f'Meg sebezted. Az ő hp-ja {self.Thp}')
 
-        
+        if ertek2 > ertek1:
+            sajathp =- 2
+            print(f'Meg sebeztek. A te életerőd {sajathp}')
+        elif ertek2 < ertek1:
+            self.Thp -= 2
+            print(f'Megsebezted az ellenfelet. Az ellenfél életereje: {self.Thp}')
+        else:
+            print('Egyikőtök sem sebződött.')
 
-    
