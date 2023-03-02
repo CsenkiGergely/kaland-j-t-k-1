@@ -138,6 +138,7 @@ class Tolvaj:
         if sajathp <= 0:
             print("A játéknak itt vége ")
 
+class harc:
     def sebzés(self):
         dobas5 = random.randint(1,6)
         dobas6 = random.randint(1,6)
@@ -146,8 +147,10 @@ class Tolvaj:
         if ertek2 >= ertek1:
             sajathp =- 1
             print(f'Meg sebeztek. A te hp-d {sajathp}')
-        else:
-            print('nem sebeztek meg')
+        elif ertek1 >= ertek2:
+             self.Thp =- 1
+             print(f'Meg sebezted. Az ő hp-ja {self.Thp}')
 
+        
 
     
