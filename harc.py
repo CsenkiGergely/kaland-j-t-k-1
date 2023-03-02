@@ -10,102 +10,89 @@ sajatdmg = dobas2 + 6
 sajatluckmax = dobas3 + 6
 
 def Tolvaj():
-    Thp = 6
-    Tdmg = 7
-    return f'Tolvaj ellenfél; Életereje: {Thp}, Ügyessége {Tdmg}'
+    hp = 6
+    dmg = 7
+    return f'Tolvaj ellenfél; Életereje: {hp}, Ügyessége {dmg}'
 
 def Oriaspok():
-    Ohp = 5
-    Odmg = 9
-    return f'Óriáspók ellenfél; Életereje: {Ohp}, Ügyessége: {Odmg}'
+    hp = 5
+    dmg = 9
+    return f'Óriáspók ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def Torpe():
-    Thp = 5
-    Tdmg = 8
-    return f'Törpe ellenfél; Életereje: {Thp}, Ügyessége: {Tdmg}'
+    hp = 5
+    dmg = 8
+    return f'Törpe ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def Fenyimadok():
-    Fhp = 11
-    Fdmg = 9
-    return f'Fényimádók ellenfél; Életereje: {Fhp}, Ügyessége: {Fdmg}'
+    hp = 11
+    dmg = 9
+    return f'Fényimádók ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def Iszapsarkany1():
-    Ihp = 6
-    Idmg = 10
-    return f'Iszapsárkány ellenfél; Életereje: {Ihp}, Ügyessége: {Idmg}'
+    hp = 6
+    dmg = 10
+    return f'Iszapsárkány ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def ElsoOrk():
-    EOhp = 6
-    EOdmg = 5
-    return f'Első Ork ellenfél; Életereje: {EOhp}, Ügyessége: {EOdmg}'
+    hp = 6
+    dmg = 5
+    return f'Első Ork ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def MasodikOrk():
-    MOhp = 5
-    MOdmg = 6
-    return f'Második Ork ellenfél; Életereje: {MOhp}, Ügyessége: {MOdmg}'
+    hp = 5
+    dmg = 6
+    return f'Második Ork ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def Xlaia():
-    Xhp = 7
-    Xdmg = 8
-    return f'Xlaia ellenfél; Életereje: {Xhp}, Ügyessége: {Xdmg}'
+    hp = 7
+    dmg = 8
+    return f'Xlaia ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def ElsoDenever():
-    EDhp = 7
-    EDdmg = 5
-    return f'Első Denevér ellenfél; Életereje: {EDhp}, Ügyesség: {EDdmg}'
+    hp = 7
+    dmg = 5
+    return f'Első Denevér ellenfél; Életereje: {hp}, Ügyesség: {dmg}'
 
 def MasodikDenever():
-    MDhp = 6
-    MDdmg = 6
-    return f'Második Denevér ellenfél; Életereje: {MDhp}, Ügyessége: {MDdmg}'
+    hp = 6
+    dmg = 6
+    return f'Második Denevér ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def ElsoSundiszno():
-    EShp = 5
-    Esdmg = 7
-    return f'Első Sündisznó ellenfél; Életereje: {EShp}, Ügyessége: {Esdmg}'
+    hp = 5
+    dmg = 7
+    return f'Első Sündisznó ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def MasodikSundiszno():
-    MShp = 5
-    MSdmg = 8
-    return f'Második Sündisznó ellenfél; Életereje: {MShp}, Ügyessége: {MSdmg}'
+    hp = 5
+    dmg = 8
+    return f'Második Sündisznó ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def Hobgoblin():
-    Hhp = 8
-    Hdmg = 7
-    return f'Hobgoblin ellenfél; Életereje: {Hhp}, Ügyessége: {Hdmg}'
+    hp = 8
+    dmg = 7
+    return f'Hobgoblin ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def Galon():
-    Ghp = 8
-    Gdmg = 12
-    return f'Galon ellenfél; Életereje: {Ghp}, Ügyessége: {Gdmg}'
+    hp = 8
+    dmg = 12
+    return f'Galon ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def ElsoIszapsarkany():
-    EIhp = 5
-    Eidmg = 9
-    return f'Első Iszapsárkány ellenfél; Életereje: {EIhp}, Ügyessége: {Eidmg}'
+    hp = 5
+    dmg = 9
+    return f'Első Iszapsárkány ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def MasodikIszapsarkany():
-    MIhp = 6
-    MIdmg = 10
-    return f'Második Iszapsárkány ellenfél; Életereje: {MIhp}, Ügyessége: {MIdmg}'
+    hp = 6
+    dmg = 10
+    return f'Második Iszapsárkány ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 def Iszapsarkany2():
-    EIhp = 5
-    Eidmg = 9
-    return f'Első Iszapsárkány ellenfél; Életereje: {EIhp}, Ügyessége: {Eidmg}'
-
-class Tolvaj:
-    def __init__(self, Thp, Tdmg):
-        self.Thp = Thp
-        self.Tdmg = Tdmg
-
-    def getEletero(self):
-      return self.eletero
-
-    def getHarciero(self):
-      return self.harciero
-
-    
+    hp = 5
+    dmg = 9
+    return f'Első Iszapsárkány ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
 
 print(*dobas)
 print(dobas2)
@@ -127,20 +114,3 @@ if kérdés == 'igen':
 elif kérdés == 'nem':
     print('nem tetted próbára a szerencsédet')
     print(f'a te szerencséd {sajatluckmax}')
-
-def Tolvaj(self, Thp, Tdmg):
-    self.Thp = Thp = 6
-    self.Thp = Tdmg = 7
-    return f'Tolvaj ellenfél; Életereje: {Thp}, Ügyessége {Tdmg}'
-
-# Fájl beolvasása
-with open('index.json', 'r', encoding="utf-8") as f:
-    kartyak = json.load(f)
-e = 110
-# JSON adatok feldolgozása
-szoveg = kartyak["a"][e-1]["szoveg"]
-
-
-    # Kártya adatainak felhasználása
-print('\n')
-print(f"Pálya: {szoveg}")
