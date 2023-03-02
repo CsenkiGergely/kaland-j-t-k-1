@@ -94,19 +94,6 @@ def Iszapsarkany2():
     Eidmg = 9
     return f'Első Iszapsárkány ellenfél; Életereje: {EIhp}, Ügyessége: {Eidmg}'
 
-class Tolvaj:
-    def __init__(self, Thp, Tdmg):
-        self.Thp = Thp
-        self.Tdmg = Tdmg
-
-    def getEletero(self):
-      return self.eletero
-
-    def getHarciero(self):
-      return self.harciero
-
-    
-
 print(*dobas)
 print(dobas2)
 print(dobas3)
@@ -128,10 +115,7 @@ elif kérdés == 'nem':
     print('nem tetted próbára a szerencsédet')
     print(f'a te szerencséd {sajatluckmax}')
 
-def Tolvaj(self, Thp, Tdmg):
-    self.Thp = Thp = 6
-    self.Thp = Tdmg = 7
-    return f'Tolvaj ellenfél; Életereje: {Thp}, Ügyessége {Tdmg}'
+
 
 class Tolvaj:
     def __init__(self, Thp, Tdmg):
@@ -145,10 +129,13 @@ class Tolvaj:
       return self.harciero
 
 
+
+
 class Tolvaj:
     def __init__ (self, Thp, Tdmg):
         self.Thp = Thp = 6
         self.Tdmg = Tdmg = 7
+
 
 class harc:
     def sebzés(self):
@@ -165,3 +152,4 @@ class harc:
             print(f'Megsebezted az ellenfelet. Az ellenfél életereje: {self.Thp}')
         else:
             print('Egyikőtök sem sebződött.')
+
