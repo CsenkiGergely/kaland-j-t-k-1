@@ -30,21 +30,4 @@ class Fohos:
         self.sajatluck = sajatluckmax
 
 
-    def harc(self):
-        while self.sajathp > 0 or self.Thp > 0:
-            DoboKocka() + self.Tdmg
-            DoboKocka() + self.sajatdmg
-            
-            sebzes = 2
-            if self.Tdmg < self.sajatdmg:
-                self.Thp -= sebzes
-            if self.Tdmg > self.sajatdmg:
-                self.sajathp -= sebzes
-            if self.Thp <= 0:
-                print(f"nyertél a harcban.")
-                print(f'A hp-d {self.sajathp}')
-            if self.sajathp <= 0:
-                print(f"nem nyertél, kalandod itt véget ért")
-                print(f'A hp-d {self.Thp}')
 
-            
