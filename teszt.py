@@ -85,3 +85,10 @@ elif h1.getEletero() < 1:
   print(f'Nyertes: {h2}')
 else:
   print(f'Nyertes: {h2}')
+
+#def vane(b,e):
+#    for i in (b):
+#        if e == i:
+#            return True
+#        else:
+#            return False
