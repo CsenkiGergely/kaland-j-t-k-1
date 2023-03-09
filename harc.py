@@ -9,108 +9,168 @@ sajathp = sum(dobas) + 12
 sajatdmg = dobas2 + 6
 sajatluckmax = dobas3 + 6
 
-def Tolvaj():
-    hp = 6
-    dmg = 7
-    return f'Tolvaj ellenfél; Életereje: {hp}, Ügyessége {dmg}'
+class Jatekos:
+    def __init__(self, hp=sajathp, dmg=sajatdmg, maxluck=sajatluckmax):
+        self.hp = sajathp
+        self.dmg = sajatdmg
+        self.maxluck = sajatluckmax
 
-def Oriaspok():
-    hp = 5
-    dmg = 9
-    return f'Óriáspók ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+    def __repr__(self):
+        return f'Ez te vagy. Életerőd: {self.hp}, Támadóerőd: {self.dmg}, Szerencséd: {self.maxluck} ({self.maxluck})'
 
-def Torpe():
-    hp = 5
-    dmg = 8
-    return f'Törpe ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+class Tolvaj:
+    def __init__(self, hp = 6, dmg = 7):
+        self.hp = hp
+        self.dmg = dmg
 
-def Fenyimadok():
-    hp = 11
-    dmg = 9
-    return f'Fényimádók ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+    def __repr__(self):
+        return f'Tolvaj ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
 
-def Iszapsarkany1():
-    hp = 6
-    dmg = 10
-    return f'Iszapsárkány ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+class Oriaspok:
+    def __init__(self, hp = 5, dmg = 9):
+        self.hp = hp
+        self.dmg = dmg
 
-def ElsoOrk():
-    hp = 6
-    dmg = 5
-    return f'Első Ork ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+    def __repr__(self):
+        return f'Óriáspók ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
 
-def MasodikOrk():
-    hp = 5
-    dmg = 6
-    return f'Második Ork ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+class Torpe:
+    def __init__(self, hp = 5, dmg = 8):
+        self.hp = hp
+        self.dmg = dmg
 
-def Xlaia():
-    hp = 7
-    dmg = 8
-    return f'Xlaia ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+    def __repr__(self):
+        return f'Törpe ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
 
-def ElsoDenever():
-    hp = 7
-    dmg = 5
-    return f'Első Denevér ellenfél; Életereje: {hp}, Ügyesség: {dmg}'
+class Fenyimadok:
+    def __init__(self, hp = 11, dmg = 9):
+        self.hp = hp
+        self.dmg = dmg
 
-def MasodikDenever():
-    hp = 6
-    dmg = 6
-    return f'Második Denevér ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+    def __repr__(self):
+        return f'Fényimádók ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
 
-def ElsoSundiszno():
-    hp = 5
-    dmg = 7
-    return f'Első Sündisznó ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+class Iszapsarkany:
+    def __init__(self, hp = 6, dmg = 10):
+        self.hp = hp
+        self.dmg = dmg
 
-def MasodikSundiszno():
-    hp = 5
-    dmg = 8
-    return f'Második Sündisznó ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+    def __repr__(self):
+        return f'Iszapsárkány ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
 
-def Hobgoblin():
-    hp = 8
-    dmg = 7
-    return f'Hobgoblin ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+class ElsoOrk:
+    def __init__(self, hp = 6, dmg = 5):
+        self.hp = hp
+        self.dmg = dmg
 
-def Galon():
-    hp = 8
-    dmg = 12
-    return f'Galon ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+    def __repr__(self):
+        return f'Első Ork ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
 
-def ElsoIszapsarkany():
-    hp = 5
-    dmg = 9
-    return f'Első Iszapsárkány ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+class MasodikOrk:
+    def __init__(self, hp = 5, dmg = 6):
+        self.hp = hp
+        self.dmg = dmg
 
-def MasodikIszapsarkany():
-    hp = 6
-    dmg = 10
-    return f'Második Iszapsárkány ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+    def __repr__(self):
+        return f'Második Ork ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
 
-def Iszapsarkany2():
-    hp = 5
-    dmg = 9
-    return f'Első Iszapsárkány ellenfél; Életereje: {hp}, Ügyessége: {dmg}'
+class Xlaia:
+    def __init__(self, hp = 7, dmg = 8):
+        self.hp = hp
+        self.dmg = dmg
 
-print(*dobas)
-print(dobas2)
-print(dobas3)
-print(f'Saját Életerő: {sajathp}')
-print(f'Saját Ügyesség: {sajatdmg}')
-print(f'Saját Szerencse: {sajatluckmax}')
+    def __repr__(self):
+        return f'Xlaia ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
 
-sajatluck = (sajatluckmax)
-érték = 1
-kérdés = input('próbára teszed a szerencsédet?(igen/nem)')
-if kérdés == 'igen':
-    dobas4 = random.randint(1,6)
-    szamok = [dobas4, sajatluck]
-    eredmeny = sum(szamok)
-    print(f'a te szerencséd {eredmeny}')
-    print(f'a te maximális szerencséd {sajatluckmax}')
+class ElsoDenever:
+    def __init__(self, hp = 7, dmg = 5):
+        self.hp = hp
+        self.dmg = dmg
+
+    def __repr__(self):
+        return f'Első Denevér ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
+
+class MasodikDenever:
+    def __init__(self, hp = 6, dmg = 6):
+        self.hp = hp
+        self.dmg = dmg
+
+    def __repr__(self):
+        return f'Második Denevér ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
+
+class ElsoSundiszno:
+    def __init__(self, hp = 5, dmg = 7):
+        self.hp = hp
+        self.dmg = dmg
+
+    def __repr__(self):
+        return f'Első Sündisznó ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
+
+class MasodikSundiszno:
+    def __init__(self, hp = 5, dmg = 8):
+        self.hp = hp
+        self.dmg = dmg
+
+    def __repr__(self):
+        return f'Második Sündisznó ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
+
+class Hobgoblin:
+    def __init__(self, hp = 8, dmg = 7):
+        self.hp = hp
+        self.dmg = dmg
+
+    def __repr__(self):
+        return f'Hobgoblin ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
+
+class Galon:
+    def __init__(self, hp = 8, dmg = 12):
+        self.hp = hp
+        self.dmg = dmg
+
+    def __repr__(self):
+        return f'Galon ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
+
+class ElsoIszapsarkany:
+    def __init__(self, hp = 5, dmg = 9):
+        self.hp = hp
+        self.dmg = dmg
+
+    def __repr__(self):
+        return f'Első Iszapsárkány ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
+
+class MasodikIszapsarkany:
+    def __init__(self, hp = 6, dmg = 10):
+        self.hp = hp
+        self.dmg = dmg
+
+    def __repr__(self):
+        return f'Második Iszapsárkány ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
+
+class Iszapsarkany2:
+    def __init__(self, hp = 5, dmg = 9):
+        self.hp = hp
+        self.dmg = dmg
+
+    def __repr__(self):
+        return f'Iszapsárkány ellenfél. Életereje: {self.hp}, TÁmadóereje: {self.dmg}'
+
+def Szerencseproba():
+    sajatluck = (sajatluckmax)
+    kérdés = input('próbára teszed a szerencsédet?(igen/nem)')
+    if kérdés == 'igen':
+        luckdice = [random.randint(1,6) for _ in range(2)]
+        siker = False
+        if sum(luckdice) < sajatluck:
+            siker = True
+            sajatluck -= 1
+            print(f'Szerencséd volt, így a következmények eredményeit csökkentetted. Új szerencse értéked: {sajatluck} ({sajatluckmax})')
+        else:
+            siker = False
+            sajatluck -= 1
+            print(f"Nem volt szerencséd, így következményeket vállalnod kell. Új szerencse értéked: {sajatluck} ({sajatluckmax})")
     
-elif kérdés == 'nem':
-    print('nem tetted próbára a szerencsédet')
+    elif kérdés == 'nem':
+        print('Nem tetted próbára a szerencsédet.')
 
+Jatekos()
+Szerencseproba()
