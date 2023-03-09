@@ -1,7 +1,4 @@
 import random
-dobas = [random.randint(1,6) for _ in range(2)]
-dobas2 = random.randint(1,6)
-dobas3 = random.randint(1,6)
 
 
 def DoboKocka():
