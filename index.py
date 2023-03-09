@@ -14,6 +14,15 @@ szoveg = kartyak["a"][e-1]
 print('\n')
 print(f"Pálya: {szoveg} \n")
 
+def DoboKocka():
+        dobas = random.randint(1,6)
+        return dobas
+
+sajathp = DoboKocka() + DoboKocka() + 6
+sajatdmg = DoboKocka() + 6
+sajatluckmax = DoboKocka() + 6
+
+print(f'HP= {sajathp}, DMG= {sajatdmg}, Luck= {sajatluckmax}')
 with open('index.json', 'r', encoding="utf-8") as f:
         kartyak = json.load(f)
         e = 2
@@ -43,20 +52,13 @@ while True:
 
 
 
-dobas = [random.randint(1,6) for _ in range(2)]
-dobas2 = random.randint(1,6)
-dobas3 = random.randint(1,6)
-
-
-def DoboKocka():
-        dobas = random.randint(1,6)
-        return dobas
 
 
 
-sajathp = DoboKocka() + DoboKocka() + 6
-sajatdmg = DoboKocka() + 6
-sajatluckmax = DoboKocka() + 6
+
+
+
+
 
 
 
@@ -130,3 +132,37 @@ while True:
 
     else:
         print('hibás bemenet')
+A = True
+if b == 147:
+    while A == False:
+        b = input("ha menni akarsz tovább írd be hogy (147):")
+    if b == '147':
+        with open('index.json', 'r', encoding="utf-8") as f:
+            kartyak = json.load(f)
+            e = 148
+            szoveg = kartyak["a"][e-1]
+            print('\n')
+            print(f"Pálya: {szoveg} \n")
+            A == False 
+
+    else:
+        print('hibás bemenet')
+
+else:
+    while  A == False:
+        b = input("ha menni akarsz tovább írd be hogy (108):")
+    if b == '108':
+        with open('index.json', 'r', encoding="utf-8") as f:
+            kartyak = json.load(f)
+            e = 109
+            szoveg = kartyak["a"][e-1]
+            print('\n')
+            print(f"Pálya: {szoveg} \n")
+            A == False 
+            
+
+    else:
+        print('hibás bemenet')
+
+
+   
