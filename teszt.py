@@ -21,6 +21,13 @@ class Ellenfel:
         self.Thp = Thp
         self.Tdmg = Tdmg
 
+    def GetTsebzes(self):
+        return self.Tdmg + DoboKocka()
+
+    def GetTéleterő(self):
+        return self.Thp + DoboKocka()
+
+
 
         
 class Fohos:
@@ -28,6 +35,17 @@ class Fohos:
         self.sajathp = sajathp 
         self.sajatdmg = sajatdmg
         self.sajatluck = sajatluckmax
+
+    def GetTsebzes(self):
+        return self.sajatdmg + DoboKocka()
+
+    def GetTéleterő(self):
+        return self.sajathp + DoboKocka()
+
+    def GetTéleterő(self):
+        return self.sajatluck
+
+    
 
 
 
